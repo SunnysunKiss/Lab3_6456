@@ -130,7 +130,7 @@ int main(void)
 	  		  else if(MotorControlEnable == 1) //on
 	  		  {
 	  			  duty = MotorSetPRM*10;
-	  			  if(MotorReadRPM < MotorSetPRM*1.01) //read less than set
+	  			  if(MotorReadRPM < MotorSetPRM*1.03) //read less than set
 	  			  {
 	  				duty = duty-10; // resolution 1% , I have 1000 so 1% of 1000 = 10
 		  			__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty);
@@ -138,7 +138,7 @@ int main(void)
 
 
 	  			  }
-	  			  else if(MotorReadRPM > MotorSetPRM*0.99) //read more than set
+	  			  else if(MotorReadRPM > MotorSetPRM*0.97) //read more than set
 	  			  {
 	  				duty = duty+10;
 		  			__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,duty);

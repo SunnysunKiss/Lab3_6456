@@ -1267,7 +1267,7 @@ int main(void)
  8000eea:	ee17 2a90 	vmov	r2, s15
  8000eee:	4b55      	ldr	r3, [pc, #340]	; (8001044 <main+0x21c>)
  8000ef0:	601a      	str	r2, [r3, #0]
-	  			  if(MotorReadRPM < MotorSetPRM*1.01) //read less than set
+	  			  if(MotorReadRPM < MotorSetPRM*1.03) //read less than set
  8000ef2:	4b58      	ldr	r3, [pc, #352]	; (8001054 <main+0x22c>)
  8000ef4:	681b      	ldr	r3, [r3, #0]
  8000ef6:	4618      	mov	r0, r3
@@ -1334,7 +1334,7 @@ int main(void)
 
 
 	  			  }
-	  			  else if(MotorReadRPM > MotorSetPRM*0.99) //read more than set
+	  			  else if(MotorReadRPM > MotorSetPRM*0.97) //read more than set
  8000f86:	4b33      	ldr	r3, [pc, #204]	; (8001054 <main+0x22c>)
  8000f88:	681b      	ldr	r3, [r3, #0]
  8000f8a:	4618      	mov	r0, r3
@@ -1403,10 +1403,10 @@ int main(void)
  800101c:	f3af 8000 	nop.w
  8001020:	a0b5ed8d 	.word	0xa0b5ed8d
  8001024:	3eb0c6f7 	.word	0x3eb0c6f7
- 8001028:	c28f5c29 	.word	0xc28f5c29
- 800102c:	3ff028f5 	.word	0x3ff028f5
- 8001030:	7ae147ae 	.word	0x7ae147ae
- 8001034:	3fefae14 	.word	0x3fefae14
+ 8001028:	47ae147b 	.word	0x47ae147b
+ 800102c:	3ff07ae1 	.word	0x3ff07ae1
+ 8001030:	70a3d70a 	.word	0x70a3d70a
+ 8001034:	3fef0a3d 	.word	0x3fef0a3d
  8001038:	20000160 	.word	0x20000160
  800103c:	20000154 	.word	0x20000154
  8001040:	20000150 	.word	0x20000150
